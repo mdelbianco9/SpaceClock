@@ -57,21 +57,55 @@ body {
 
 }
 
+
+
 /*Entry section*/
 /*from HTML*/
 #entry {
-	border: 1px solid white;
+	/*border: 1px solid white;*/
+	border-radius: 10px;
+	background-color: #fec500;
+	opacity: .8;
+	padding: 1%;
+	margin-top: 3%;
 }
 
-.no {
-	border: 1px solid purple;
-	width: 100%;
+#entry p {
+	display: inline;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	word-spacing: 2px;
+	color: black;
+}
+
+#coef {
+	display: inline;
+	width: 15%;
+	border-radius: 40px;
+	background-color: ;
+}
+
+#traveling {
+	display: inline;
+	width: 15%;
+	border-radius: 40px;
+	background-color: ;
+}
+
+.btn {
+	display: inline-block;
+	margin-left: 5%;
+	border-radius: 50%;
+}
+
+.btn-success {
+	background-color: #7b0911;
+	background-image: none;
 }
 
 
-.hi {
-	border: 1px solid green;
-}
+
+
 
 /*Future Section*/
 .future {
@@ -89,6 +123,9 @@ body {
 	border:1px solid green;
 	text-align: center;
 }
+
+
+
 
 
 

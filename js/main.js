@@ -29,6 +29,7 @@ function interval() {
 			var sec = sec + "  AM"
 		}
 
+	
 		// Displays the time into HTML
 		document.getElementById('time').innerHTML = hour + " : " + min + " : " + sec;
 
@@ -58,62 +59,64 @@ function futuretime() {
 	var day = date.getDay();
 
 	console.log(month);
-// -----------------
-// Creates box to put future dates in
+// -------------------------------------
+
+// --Future Date Box--
 	var newdate = document.getElementById('entrybox');
 	newdate.id = 'newdate';
 
-	var headbox = document.createElement('div');
-	headbox.className = 'row hi col-md-offset-2 col-md-8 col-md-offset-2 col-sm-offset-2 col-sm-8 col-sm-offset-2';
-
-
-// Month box elements
-	var month_box2 = document.createElement('h2');
-	month_box2.className = 'future';
-	var month_box = document.createElement('h1');
+// -----Month Box-----
+	var month_box = document.createElement('div');
 	month_box.className = 'future';
-// Day box elements
-	var day_box2 = document.createElement('h2');
-	day_box2.className = 'future';
-	var day_box = document.createElement('h1');
+	// Create H2 Elements--Month
+	var month_h2 = document.createElement('h2');
+	var month_text2 = document.createTextNode('Month');
+	month_h2.appendChild(month_text2);
+	month_box.appendChild(month_h2);
+	// Create H1 Element---Date
+	var month_h1 = document.createElement('h1');
+	var month_text1 = document.createTextNode(month);
+	month_h1.appendChild(month_text1);
+	month_box.appendChild(month_h1);
+	
+
+// -----Day Box--------
+	var day_box = document.createElement('div');
 	day_box.className = 'future';
-// Year box elements
-	var year_box2 = document.createElement('h2');
-	year_box2.className = 'future';
-	var year_box = document.createElement('h1');
+	// Create H2 Elements--Month
+	var day_h2 = document.createElement('h2');
+	var day_text2 = document.createTextNode('Day');
+	day_h2.appendChild(day_text2);
+	day_box.appendChild(day_h2);
+	// Create H1 Element---Date
+	var day_h1 = document.createElement('h1');
+	var day_text1 = document.createTextNode(day);
+	day_h1.appendChild(day_text1);
+	day_box.appendChild(day_h1);
+
+
+// ---- Year Box---------
+	var year_box = document.createElement('div');
 	year_box.className = 'future';
-// -----------------
+	// Create H2 Elements--Month
+	var year_h2 = document.createElement('h2');
+	var year_text2 = document.createTextNode('Year');
+	year_h2.appendChild(year_text2);
+	year_box.appendChild(year_h2);
+	// Create H1 Element---Date
+	var year_h1 = document.createElement('h1');
+	var year_text1 = document.createTextNode(year);
+	year_h1.appendChild(year_text1);
+	year_box.appendChild(year_h1);
 
-// Text nodes for headings
-	var text1 = document.createTextNode("Month");
-	var month_text = document.createTextNode(month);
-	month_box2.appendChild(text1);
-	month_box.appendChild(month_text);
 
-	var text2 = document.createTextNode("Day");
-	var day_text = document.createTextNode(day);
-	day_box2.appendChild(text2);
-	day_box.appendChild(day_text);
-
-	var text3 = document.createTextNode("Year");
-	var year_text = document.createTextNode(year);
-	year_box2.appendChild(text3);
-	year_box.appendChild(year_text);
-
-// Append future dates into newdate div
-	headbox.appendChild(month_box2);
-	headbox.appendChild(day_box2);
-	headbox.appendChild(year_box2);
-
-	newdate.appendChild(headbox);
+// Append future date boxes into newdate
 	newdate.appendChild(month_box);
 	newdate.appendChild(day_box);
 	newdate.appendChild(year_box);
 
-
+// Put newdate into document
 	document.body.appendChild(newdate);
-
-
 
 };
 
