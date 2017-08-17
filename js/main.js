@@ -29,7 +29,7 @@ function interval() {
 			var sec = sec + "  AM"
 		}
 
-	
+
 		// Displays the time into HTML
 		document.getElementById('time').innerHTML = hour + " : " + min + " : " + sec;
 
@@ -44,6 +44,9 @@ function futuretime() {
 	var to = document.getElementById('traveling').value;
 	var c = 2.99e8;
 	var coef = document.getElementById('coef').value * .01;
+	if (coef == 100 * .01) {
+		alert('Sorry, It is impossible to travel at 100% the speed of light')
+	}
 	var v = coef * c;
 	var v2 = Math.pow(v, 2);
 	var c2 = Math.pow(c, 2);
@@ -58,12 +61,18 @@ function futuretime() {
 	var month = date.getMonth() + 1;
 	var day = date.getDay();
 
-	console.log(month);
+	console.log(month + "Heres the date");
 // -------------------------------------
 
 // --Future Date Box--
 	var newdate = document.getElementById('entrybox');
 	newdate.id = 'newdate';
+
+	var earthtime = document.createElement('h2');
+	earthtime.className = 'earthtime';
+	var earth_text = document.createTextNode("Time on Earth");
+	earthtime.appendChild(earth_text);
+	newdate.appendChild(earthtime);
 
 // -----Month Box-----
 	var month_box = document.createElement('div');
@@ -78,6 +87,7 @@ function futuretime() {
 	var month_text1 = document.createTextNode(month);
 	month_h1.appendChild(month_text1);
 	month_box.appendChild(month_h1);
+	month_h1.className = 'future_h1';
 	
 
 // -----Day Box--------
@@ -93,6 +103,7 @@ function futuretime() {
 	var day_text1 = document.createTextNode(day);
 	day_h1.appendChild(day_text1);
 	day_box.appendChild(day_h1);
+	day_h1.className = 'future_h1';
 
 
 // ---- Year Box---------
@@ -108,6 +119,7 @@ function futuretime() {
 	var year_text1 = document.createTextNode(year);
 	year_h1.appendChild(year_text1);
 	year_box.appendChild(year_h1);
+	year_h1.className = 'future_h1';
 
 
 // Append future date boxes into newdate
@@ -123,7 +135,7 @@ function futuretime() {
 
 // How to resart function evrytime you click
 // How to change color of my time
-
+// Day and month are not working
 
 
 
