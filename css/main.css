@@ -127,10 +127,11 @@ body {
 }
 
 /*from JS*/
-#newdate {
+#entrybox {
 	/*border:1px solid green;*/
 	text-align: center;
 	margin-top: 2%;
+	/*display: none;*/
 }
 
 .earthtime {

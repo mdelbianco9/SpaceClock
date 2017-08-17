@@ -7,6 +7,13 @@ function interval() {
 	var hour = date.getHours();
 	var min = date.getMinutes();
 	var sec = date.getSeconds();
+		// Changes from AM to PM
+		if (hour >= 13) {
+			var sec = sec + "  PM"
+			console.log(sec)
+		} if (hour <= 12) {
+			var sec = sec + "  AM"
+		}
 		// Chnage from military time
 		if (hour >= 13) {
 			hour = hour - 12; 
@@ -21,13 +28,7 @@ function interval() {
 		} if (min < 10) {
 			min = "0" + min;
 		} 
-		// Changes from AM to PM
-		if (hour >= 13) {
-			var sec = sec + "  PM"
-			console.log(sec)
-		} if (hour <= 12) {
-			var sec = sec + "  AM"
-		}
+	
 
 
 		// Displays the time into HTML
@@ -59,14 +60,14 @@ function futuretime() {
 	var date = new Date();
 	var year = date.getFullYear() + T;
 	var month = date.getMonth() + 1;
-	var day = date.getDay();
+	var day = date.getDate();
 
 	console.log(month + "Heres the date");
 // -------------------------------------
 
 // --Future Date Box--
 	var newdate = document.getElementById('entrybox');
-	newdate.id = 'newdate';
+	// newdate.id = 'newdate';
 
 	var earthtime = document.createElement('h2');
 	earthtime.className = 'earthtime';
@@ -134,7 +135,6 @@ function futuretime() {
 
 
 // How to resart function evrytime you click
-// How to change color of my time
 // Day and month are not working
 
 
