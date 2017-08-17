@@ -27,16 +27,34 @@
   </head>
   <body>
  
+ <!-- Top Clock -->
    <div class="row">
     <div id="clockbox" class="col-md-offset-2 col-md-8 col-md-offset-2 col-sm-offset-2 col-sm-8 col-sm-offset-2">
-      <h1>Your Time</h1>
-      <h2 id="time" class="col-md-offset-1 col-md-10 col-md-offset-1 col-xs-12"></h2>
+      <!-- <h1>Your Time</h1> -->
+      <h2 id="time" class="col-md-offset-2 col-md-8 col-md-offset-2 col-xs-12"></h2>
     </div>
   </div>
 
-  <input id="coef">
-  <input id="traveling">
-  <button onclick="futuretime()">Click Me</button>
+<!-- Input Section -->
+  <div class="row">
+    <div id="entry" class="col-md-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-6 col-sm-offset-3">
+      <div class="form-group">
+         <p>The speed of light is roughly 670 Million mph. What percentage of that would you like to travel at?</p>
+        <input type="text" class="form-control" id="coef";>
+      </div>
+      <div class="form-group">
+        <p>Years traveling?</p>
+        <input type="text" class="form-control" id="traveling">
+        <p>Years</p>
+        <button class="btn-success" onclick="futuretime()">Click Me</button>
+      </div>
+    </div>
+  </div>
+
+<!-- JS -->
+  <div id="entrybox">
+  </div>
+  
 
     <div id="slider"></div>
     <div id="value"></div>

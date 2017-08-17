@@ -54,32 +54,72 @@ function futuretime() {
 
 	var date = new Date();
 	var year = date.getFullYear() + T;
-	var month = date.getMonth();
+	var month = date.getMonth() + 1;
 	var day = date.getDay();
 
-	console.log(year);
-
-	var newdate = document.createElement('div');
+	console.log(month);
+// -----------------
+// Creates box to put future dates in
+	var newdate = document.getElementById('entrybox');
 	newdate.id = 'newdate';
+
+	var headbox = document.createElement('div');
+	headbox.className = 'row hi col-md-offset-2 col-md-8 col-md-offset-2 col-sm-offset-2 col-sm-8 col-sm-offset-2';
+
+
+// Month box elements
+	var month_box2 = document.createElement('h2');
+	month_box2.className = 'future';
 	var month_box = document.createElement('h1');
 	month_box.className = 'future';
+// Day box elements
+	var day_box2 = document.createElement('h2');
+	day_box2.className = 'future';
 	var day_box = document.createElement('h1');
 	day_box.className = 'future';
+// Year box elements
+	var year_box2 = document.createElement('h2');
+	year_box2.className = 'future';
 	var year_box = document.createElement('h1');
 	year_box.className = 'future';
+// -----------------
 
-	
+// Text nodes for headings
+	var text1 = document.createTextNode("Month");
+	var month_text = document.createTextNode(month);
+	month_box2.appendChild(text1);
+	month_box.appendChild(month_text);
 
-	// var month_text = createTextNode(month);
-	// var day_text = createTextNode(day);
-	// var year_text = createTextNode(year);
+	var text2 = document.createTextNode("Day");
+	var day_text = document.createTextNode(day);
+	day_box2.appendChild(text2);
+	day_box.appendChild(day_text);
+
+	var text3 = document.createTextNode("Year");
+	var year_text = document.createTextNode(year);
+	year_box2.appendChild(text3);
+	year_box.appendChild(year_text);
+
+// Append future dates into newdate div
+	headbox.appendChild(month_box2);
+	headbox.appendChild(day_box2);
+	headbox.appendChild(year_box2);
+
+	newdate.appendChild(headbox);
+	newdate.appendChild(month_box);
+	newdate.appendChild(day_box);
+	newdate.appendChild(year_box);
+
+
+	document.body.appendChild(newdate);
 
 
 
 };
 
 
-
+// How to resart function evrytime you click
+// How to change color of my time
 
 
 
