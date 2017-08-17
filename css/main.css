@@ -1,0 +1,66 @@
+body {
+	background: url(../img/towers.jpg);
+	background-size: 100%;
+
+}
+/*CLOCK */
+.row {
+	/*border:1px solid blue;*/
+}
+
+.col-xs-12 {
+	font-size: 30px;
+}
+
+#clockbox {
+	border: 1px solid black;
+
+	border-radius: 20px;
+	box-shadow: 1px 1px 10px 10px black;
+	background-color: #080911;
+	opacity: .8;
+	text-align: center;
+	margin-top: 3%;
+}
+
+#clockbox h1 {
+	/*border:1px solid red;*/
+	font-size: 40px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	/*font-style: italic;*/
+
+}
+
+#time {
+	border-radius: 50px;
+	margin-bottom: 2%;
+	font-size: 80px;
+	color: white;
+	font-family: sans-serif;
+	color: black;
+	background-color: white;
+	opacity: .9;
+
+}
+
+
+
+
+
+#slider {
+	/*border: 1px solid red;*/
+	display: inline-block;
+	width: 500px;
+	height: 20px;
+}
+
+#value {
+	/*border: 1px solid black;*/
+	display: inline-block;
+}
+
+#slidebutton {
+	/*border: 1px solid black;*/
+
+}
