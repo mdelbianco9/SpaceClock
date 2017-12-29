@@ -1,7 +1,7 @@
 body {
-	background: url(../img/towers.jpg);
-	background-size: 100%;
-	/*background-repeat: no-repeat;*/
+	background: url(../img/earth.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 
 }
 /*CLOCK */
@@ -50,7 +50,7 @@ body {
 	font-family: sans-serif;
 	color: white;
 	/*border: 1px solid white;*/
-	background-color: #f40008;
+	background-color: transparent;
 	opacity: .9;
 	font-family: 'Josefin Sans', sans-serif;
 
@@ -65,8 +65,8 @@ body {
 #entry {
 	/*border: 1px solid white;*/
 	border-radius: 10px;
-	background-color: #fec500;
-	opacity: .8;
+	background-color: #fff;
+	opacity: .6;
 	padding: 1%;
 	margin-top: 3%;
 }
@@ -139,6 +139,9 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
+#passed {
+	margin-top: 0;
+}
 
 
 

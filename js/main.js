@@ -9,10 +9,10 @@ function interval() {
 	var sec = date.getSeconds();
 		// Changes from AM to PM
 		if (hour >= 13) {
-			var sec = sec + "  PM"
+			var sec = sec + "  pm"
 			console.log(sec)
 		} if (hour <= 12) {
-			var sec = sec + "  AM"
+			var sec = sec + "  am"
 		}
 		// Chnage from military time
 		if (hour >= 13) {
@@ -47,7 +47,7 @@ function futuretime() {
 	var to = document.getElementById('traveling').value;
 	var c = 2.99e8;
 	var coef = document.getElementById('coef').value * .01;
-	if (coef == 100 * .01) {
+	if (coef >= 100 * .01) {
 		alert('Sorry, It is impossible to travel at 100% the speed of light')
 	}
 	var v = coef * c;
@@ -64,6 +64,8 @@ function futuretime() {
 	var month = date.getMonth() + 1;
 	var day = date.getDate();
 
+	var passed = year - date.getFullYear();
+
 	console.log(month + "Heres the date");
 // -------------------------------------
 	// Puts the month into HTML
@@ -72,6 +74,8 @@ function futuretime() {
 	document.getElementById('day').textContent = day;
 	// Puts Year into HTML
 	document.getElementById('year').textContent = year;
+	// 
+	document.getElementById('passed').textContent = passed;
 
 	// Shows the future dates when the function is clicked on
 	document.getElementById("entrybox").style.visibility = "visible";
